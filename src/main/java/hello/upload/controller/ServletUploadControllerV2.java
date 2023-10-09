@@ -63,6 +63,7 @@ public class ServletUploadControllerV2 {
                 log.info("파일 저장 fullPath={}", fullPath);
                 part.write(fullPath);
             }
+            inputStream.close();
         }
 
         return "upload-form";
